@@ -1,0 +1,40 @@
+name: Local acceptance and distribution
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  local-gates:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.12.14'
+      - name: Prepare pinned tools from an empty cache
+        shell: bash
+        run: |
+          python -B -m venv .venv
+          mkdir -p .local-verification/build/wheelhouse
+          .venv/bin/python -B -m pip download --no-cache-dir --only-binary=:all: --no-deps --require-hashes -r requirements-build.lock --dest .local-verification/build/wheelhouse
+          .venv/bin/python -B -m pip install --no-index --no-deps --require-hashes --find-links .local-verification/build/wheelhouse -r requirements-build.lock
+          .venv/bin/python -B -m pip check
+          .venv/bin/python -B -m pip install --no-index --no-deps --no-build-isolation -e .
+          .venv/bin/python -B scripts/sync_documentation.py
+      - name: Block Python network access for all remaining processes
+        run: .venv/bin/python -B scripts/block_test_network.py
+      - name: All eighteen local acceptance criteria
+        env:
+          ACL_TEST_EVIDENCE: .local-verification/build/ci-snapshots
+          PIP_NO_INDEX: '1'
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: .venv/bin/python -B scripts/verify.py full-suite -- .venv/bin/python -B -m unittest discover -s tests -t . -v
+
+# No hosted conclusion is asserted here. This workflow runs only after a
+# separately authorized push; Linux compatibility awaits its actual evidence.

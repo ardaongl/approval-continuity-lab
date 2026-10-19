@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools==84.0.0", "wheel==0.48.0", "packaging==26.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "approval-continuity-lab"
+version = "0.1.0"
+description = "Offline approval continuity, atomic effects, and adversarial process experiments"
+requires-python = "==3.12.*"
+dependencies = []
+license = "MIT"
+license-files = ["LICENSE"]
+readme = "PACKAGE-README.md"
+classifiers = ["Operating System :: POSIX", "Programming Language :: Python :: 3.12"]
+
+[project.scripts]
+acl = "approval_continuity_lab.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+approval_continuity_lab = ["documentation/**/*", "documentation/*"]

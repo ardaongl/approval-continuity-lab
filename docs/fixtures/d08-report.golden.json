@@ -1,0 +1,1 @@
+{"approval_id":"a1","authorized_at_ms":null,"code":"TARGET_REVISION_CHANGED","command":"execute","data":null,"details":[{"actual":"2","expected":"1","path":"/target"}],"effect_status":"none","execution_id":"x1","mode":"REFERENCE","observed_at_ms":1600,"outcome":"denied","proposal_id":"p1","replayed":false,"schema_version":1,"status":"superseded"}

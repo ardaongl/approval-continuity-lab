@@ -1,0 +1,15 @@
+# Trust and threat boundaries
+
+Trusted: local operator, host/OS, Python/SQLite installation, filesystem locking/durability, database contents, mediator registry/config, injected clock and test coordinator. --actor and --context select seeded lab personas; they provide no production authentication. Possession of an opaque proposal/approval/execution ID is insufficient inside mediator rules; hashes check binding but do not authenticate callers.
+
+In-scope faults/attacks: submitted field substitutions, misleading descriptions, stale approved state, retries, concurrent independent writers through supported methods, explicit revocation, expiry, clock regression, drift/ABA, input errors, DB unavailable/corrupt, process interruption/crash and output delivery failure.
+
+Direct database modification or replacing code bypasses the mediator. The reference cannot stop another same-user process with database access. Raw-SQL reads are independent test oracles; deliberate raw-SQL corruption is a fault fixture, not supported use. No sandbox, cryptographic attestation, secured credential store, security certification or production gateway claim.
+
+The guarantee is bounded to one simulated service update. Neither bound arguments nor a plan digest establish LLM intent, transitive script effects, credential safety or external API behavior. Revocation cannot undo committed effects. SQLite process-crash consistency is tested; arbitrary power failure is not certified. Time is operator-injected, not globally trusted. Runtime startup writes are bounded as in [CLI/process](cli-reporting.md); no universal OS no-write claim.
+
+Reference mode is the only public execute path. Naive baseline is available only inside built-in D13, in a separate temporary DB, labeled NAIVE_BASELINE/UNSAFE_EDUCATIONAL. It deliberately tests only existence of an approved decision, skips drift/time/replay validation and performs a synthetic service update; its behavior is not a vendor representation. It never modifies the reference scenario DB and is not a general adapter plug-in.
+
+D14 runs the reference operation against synthetic service state, then coordinator writes a different sentinel artifact to outside-effect.json in that scenario's temporary directory, outside the SQLite boundary. File content is exactly C({artifact_digest:<synthetic artifact ID>}) plus LF, initially A and then C. This fixed toy step is labeled OUTSIDE_BOUNDARY/OUTSIDE_GUARANTEE. It is not a deployment API, shell command, supported adapter or model inference. The experiment must state that mediator checks remain limited to the DB; the sentinel is not included in its approval result. No arbitrary executable paths/commands are accepted.
+
+Runtime is offline; subprocesses launch only fixed package worker code. No scenario plugins, URLs, credentials or network access. Do not solicit secrets. Reports include synthetic manifests/persona IDs; provide no secret-redaction guarantee and document that users should not put sensitive data in descriptions.

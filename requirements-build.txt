@@ -1,0 +1,5 @@
+pip==26.2.1
+setuptools==84.0.0
+wheel==0.48.0
+# Required by wheel>=0.48; observed bundled version, build-only.
+packaging==26.3

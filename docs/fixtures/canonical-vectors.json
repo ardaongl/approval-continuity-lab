@@ -1,0 +1,1 @@
+[{"canonical_ascii":"{\"a\":0,\"b\":\"\\u00e9\"}","input":" { \"b\" : \"\u00e9\", \"a\": -0 } "},{"canonical_ascii":"{\"a\":\"e\\u0301\"}","input":"{\"a\":\"e\u0301\"}"},{"canonical_ascii":"{\"a\":\"\\ud83d\\ude00\"}","input":"{\"a\":\"\ud83d\ude00\"}"}]

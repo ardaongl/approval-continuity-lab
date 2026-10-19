@@ -1,0 +1,411 @@
+{
+  "schema_version": 1,
+  "project": {
+    "slug": "approval-continuity-lab",
+    "title": "Approval Continuity Lab",
+    "profile": "showcase"
+  },
+  "phase": "INITIAL_PUSH_AUTHORIZED",
+  "acceptance": [
+    {
+      "id": "AC-01",
+      "discovery_id": "D01",
+      "status": "PASS",
+      "evidence": [
+        ".local-verification/build/final/result.json",
+        ".local-verification/build/final/stderr.txt",
+        ".local-verification/build/final-snapshots",
+        ".local-verification/build/20261019T174101229373Z-f1-full-suite/result.json",
+        ".local-verification/harden/f1/full-snapshots"
+      ]
+    },
+    {
+      "id": "AC-02",
+      "discovery_id": "D02",
+      "status": "PASS",
+      "evidence": [
+        ".local-verification/build/final/result.json",
+        ".local-verification/build/final/stderr.txt",
+        ".local-verification/build/final-snapshots",
+        ".local-verification/build/20261019T174101229373Z-f1-full-suite/result.json",
+        ".local-verification/harden/f1/full-snapshots"
+      ]
+    },
+    {
+      "id": "AC-03",
+      "discovery_id": "D03",
+      "status": "PASS",
+      "evidence": [
+        ".local-verification/build/final/result.json",
+        ".local-verification/build/final/stderr.txt",
+        ".local-verification/build/final-snapshots",
+        ".local-verification/build/20261019T174101229373Z-f1-full-suite/result.json",
+        ".local-verification/harden/f1/full-snapshots"
+      ]
+    },
+    {
+      "id": "AC-04",
+      "discovery_id": "D04",
+      "status": "PASS",
+      "evidence": [
+        ".local-verification/build/final/result.json",
+        ".local-verification/build/final/stderr.txt",
+        ".local-verification/build/final-snapshots",
+        ".local-verification/build/20261019T174101229373Z-f1-full-suite/result.json",
+        ".local-verification/harden/f1/full-snapshots"
+      ]
+    },
+    {
+      "id": "AC-05",
+      "discovery_id": "D05",
+      "status": "PASS",
+      "evidence": [
+        ".local-verification/build/final/result.json",
+        ".local-verification/build/final/stderr.txt",
+        ".local-verification/build/final-snapshots",
+        ".local-verification/build/20261019T174101229373Z-f1-full-suite/result.json",
+        ".local-verification/harden/f1/full-snapshots"
+      ]
+    },
+    {
+      "id": "AC-06",
+      "discovery_id": "D06",
+      "status": "PASS",
+      "evidence": [
+        ".local-verification/build/final/result.json",
+        ".local-verification/build/final/stderr.txt",
+        ".local-verification/build/final-snapshots",
+        ".local-verification/build/20261019T174101229373Z-f1-full-suite/result.json",
+        ".local-verification/harden/f1/full-snapshots"
+      ]
+    },
+    {
+      "id": "AC-07",
+      "discovery_id": "D07",
+      "status": "PASS",
+      "evidence": [
+        ".local-verification/build/final/result.json",
+        ".local-verification/build/final/stderr.txt",
+        ".local-verification/build/final-snapshots",
+        ".local-verification/build/20261019T174101229373Z-f1-full-suite/result.json",
+        ".local-verification/harden/f1/full-snapshots"
+      ]
+    },
+    {
+      "id": "AC-08",
+      "discovery_id": "D08",
+      "status": "PASS",
+      "evidence": [
+        ".local-verification/build/final/result.json",
+        ".local-verification/build/final/stderr.txt",
+        ".local-verification/build/final-snapshots",
+        ".local-verification/build/20261019T174101229373Z-f1-full-suite/result.json",
+        ".local-verification/harden/f1/full-snapshots"
+      ]
+    },
+    {
+      "id": "AC-09",
+      "discovery_id": "D09",
+      "status": "PASS",
+      "evidence": [
+        ".local-verification/build/final/result.json",
+        ".local-verification/build/final/stderr.txt",
+        ".local-verification/build/final-snapshots",
+        ".local-verification/build/20261019T174101229373Z-f1-full-suite/result.json",
+        ".local-verification/harden/f1/full-snapshots"
+      ]
+    },
+    {
+      "id": "AC-10",
+      "discovery_id": "D10",
+      "status": "PASS",
+      "evidence": [
+        ".local-verification/build/final/result.json",
+        ".local-verification/build/final/stderr.txt",
+        ".local-verification/build/final-snapshots",
+        ".local-verification/build/20261019T174101229373Z-f1-full-suite/result.json",
+        ".local-verification/harden/f1/full-snapshots"
+      ]
+    },
+    {
+      "id": "AC-11",
+      "discovery_id": "D11",
+      "status": "PASS",
+      "evidence": [
+        ".local-verification/build/final/result.json",
+        ".local-verification/build/final/stderr.txt",
+        ".local-verification/build/final-snapshots",
+        ".local-verification/build/20261019T174101229373Z-f1-full-suite/result.json",
+        ".local-verification/harden/f1/full-snapshots"
+      ]
+    },
+    {
+      "id": "AC-12",
+      "discovery_id": "D12",
+      "status": "PASS",
+      "evidence": [
+        ".local-verification/build/final/result.json",
+        ".local-verification/build/final/stderr.txt",
+        ".local-verification/build/final-snapshots",
+        ".local-verification/build/20261019T174101229373Z-f1-full-suite/result.json",
+        ".local-verification/harden/f1/full-snapshots"
+      ]
+    },
+    {
+      "id": "AC-13",
+      "discovery_id": "D13",
+      "status": "PASS",
+      "evidence": [
+        ".local-verification/build/final/result.json",
+        ".local-verification/build/final/stderr.txt",
+        ".local-verification/build/final-snapshots",
+        ".local-verification/build/20261019T174101229373Z-f1-full-suite/result.json",
+        ".local-verification/harden/f1/full-snapshots"
+      ]
+    },
+    {
+      "id": "AC-14",
+      "discovery_id": "D14",
+      "status": "PASS",
+      "evidence": [
+        ".local-verification/build/final/result.json",
+        ".local-verification/build/final/stderr.txt",
+        ".local-verification/build/final-snapshots",
+        ".local-verification/build/20261019T174101229373Z-f1-full-suite/result.json",
+        ".local-verification/harden/f1/full-snapshots"
+      ]
+    },
+    {
+      "id": "AC-15",
+      "discovery_id": null,
+      "status": "PASS",
+      "evidence": [
+        ".local-verification/build/final/result.json",
+        ".local-verification/build/final/stderr.txt",
+        ".local-verification/build/final-snapshots",
+        ".local-verification/build/20261019T174101229373Z-f1-full-suite/result.json",
+        ".local-verification/harden/f1/full-snapshots"
+      ]
+    },
+    {
+      "id": "AC-16",
+      "discovery_id": null,
+      "status": "PASS",
+      "evidence": [
+        ".local-verification/build/final/result.json",
+        ".local-verification/build/final/stderr.txt",
+        ".local-verification/build/final-snapshots",
+        ".local-verification/build/20261019T174101229373Z-f1-full-suite/result.json",
+        ".local-verification/harden/f1/full-snapshots"
+      ]
+    },
+    {
+      "id": "AC-17",
+      "discovery_id": null,
+      "status": "PASS",
+      "evidence": [
+        ".local-verification/build/final/result.json",
+        ".local-verification/build/final/stderr.txt",
+        ".local-verification/build/final-snapshots",
+        ".local-verification/build/20261019T174101229373Z-f1-full-suite/result.json",
+        ".local-verification/harden/f1/full-snapshots"
+      ]
+    },
+    {
+      "id": "AC-18",
+      "discovery_id": null,
+      "status": "PASS",
+      "evidence": [
+        ".local-verification/build/final/result.json",
+        ".local-verification/build/final/stderr.txt",
+        ".local-verification/build/final-snapshots",
+        ".local-verification/build/20261019T174101229373Z-f1-full-suite/result.json",
+        ".local-verification/harden/f1/full-snapshots"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "command": ".venv/bin/python -B -m unittest discover -s tests -t . -v",
+      "exit_code": 0,
+      "evidence": [
+        ".local-verification/build/20261019T170853484731Z-full-suite-candidate/result.json",
+        ".local-verification/build/final/result.json"
+      ]
+    },
+    {
+      "command": ".venv/bin/python -B -m unittest tests.acceptance.test_d11 tests.process.test_fault_matrix -v",
+      "exit_code": 0,
+      "evidence": [
+        ".local-verification/build/20261019T171033738914Z-final-b1-process/result.json"
+      ]
+    },
+    {
+      "command": ".venv/bin/python -I -B -m pip check",
+      "exit_code": 0,
+      "evidence": [
+        ".local-verification/build/20261019T171042064713Z-toolchain-integrity/result.json"
+      ]
+    },
+    {
+      "command": ".venv/bin/python -B -m unittest discover -s tests -t . -v",
+      "exit_code": 0,
+      "evidence": [
+        ".local-verification/build/20261019T174101229373Z-f1-full-suite/result.json",
+        ".local-verification/harden/f1/full-snapshots"
+      ]
+    }
+  ],
+  "spec_verification": {
+    "record": "docs/SPEC-VERIFICATION.md",
+    "scope": "documentation and declarative fixtures only",
+    "checks": [
+      {
+        "command": "python3 -B $REPO_FACTORY_ROOT/scripts/validate.py --project-dir . --phase spec",
+        "exit_code": 0,
+        "scope": "metadata only"
+      },
+      {
+        "command": "$PYTHON312 -B .local-verification/check_spec.py",
+        "exit_code": 0,
+        "scope": "documents and declarative assets only"
+      }
+    ],
+    "public_command_rendering": "Workstation paths replaced with portable variables; exact historical record is preserved in ignored local publication snapshots."
+  },
+  "audit": {
+    "status": "PASS",
+    "candidate_fingerprint": "ab694cef7dee7d4e7a6fd938c735d88669775738b1deee8b4961095a88536851",
+    "findings": [],
+    "evidence": [
+      ".local-verification/publish/audit-evidence/AUDIT-REPORT.md",
+      "docs/PUBLICATION-VERIFICATION.md"
+    ],
+    "scope": "Independent post-hardening product audit; publication-only documentation and metadata revalidation recorded separately."
+  },
+  "authorization": {
+    "spec": true,
+    "preflight": true,
+    "build": true,
+    "initial_push": true,
+    "remote": "ardaongl/approval-continuity-lab",
+    "visibility": "public",
+    "branch": "main",
+    "corrective_ci_pushes": true,
+    "pypi": false,
+    "github_release": false,
+    "deployment": false
+  },
+  "hosted_ci": {
+    "status": "PENDING_HOSTED_CI",
+    "head_sha": null,
+    "conclusion": null,
+    "run_url": null
+  },
+  "final_commit_sha": null,
+  "repository_url": null,
+  "preflight": {
+    "status": "PASS",
+    "evidence": [
+      ".local-verification/build/m0-transition.json",
+      ".local-verification/build/independent-m0/AUDIT-REPORT.md"
+    ]
+  },
+  "milestones": {
+    "M0": {
+      "status": "PASS",
+      "evidence": [
+        ".local-verification/build/m0-transition.json"
+      ]
+    },
+    "M1": {
+      "status": "PASS",
+      "evidence": [
+        ".local-verification/build/20261019T165539192825Z-m1/result.json"
+      ]
+    },
+    "M2": {
+      "status": "PASS",
+      "evidence": [
+        ".local-verification/build/20261019T165707119221Z-m2-corrected-fixtures/result.json"
+      ]
+    },
+    "M3": {
+      "status": "PASS",
+      "evidence": [
+        ".local-verification/build/20261019T165828468531Z-m3-barrier-fix/result.json",
+        ".local-verification/build/process-snapshots"
+      ]
+    },
+    "M4": {
+      "status": "PASS",
+      "evidence": [
+        ".local-verification/build/final/result.json",
+        ".local-verification/build/final-snapshots"
+      ]
+    },
+    "M5": {
+      "status": "PASS",
+      "evidence": [
+        ".local-verification/build/final/result.json",
+        ".local-verification/build/final-snapshots"
+      ]
+    },
+    "M6": {
+      "status": "PASS",
+      "evidence": [
+        ".local-verification/build/final/result.json",
+        ".local-verification/build/final-snapshots"
+      ]
+    }
+  },
+  "local_gate": {
+    "status": "PASS",
+    "final_attestation": ".local-verification/harden/f1/final-attestation.json",
+    "limitations": [
+      "Supported host verified on macOS arm64; Linux hosted CI remains pending.",
+      "Process crash tests do not certify power-loss resilience.",
+      "Original F1/P2 was resolved by hardening and independently re-audited PASS."
+    ]
+  },
+  "hardening": {
+    "finding": "F1",
+    "status": "PASS",
+    "evidence": [
+      "docs/HARDENING-F1.md",
+      ".local-verification/build/20261019T174101229373Z-f1-full-suite/result.json",
+      ".local-verification/harden/f1/full-snapshots",
+      ".local-verification/harden/f1/final-attestation.json"
+    ],
+    "independent_reaudit": "PASS",
+    "ready_for_independent_reaudit": true
+  },
+  "audit_history": [
+    {
+      "stage": "initial-independent-audit",
+      "status": "BLOCKED",
+      "candidate_fingerprint": "4a60c9cdd2c720f08e7a7844928fb9f5f575f2d2f18cf8edebe40f4e62015772",
+      "findings": [
+        {
+          "id": "F1",
+          "severity": "P2",
+          "acceptance": [
+            "AC-12"
+          ],
+          "status": "FIXED_LOCALLY_REAUDIT_PENDING",
+          "report": ".local-verification/harden/f1/audit-report.md"
+        }
+      ]
+    },
+    {
+      "stage": "post-hardening-independent-reaudit",
+      "status": "PASS",
+      "candidate_fingerprint": "ab694cef7dee7d4e7a6fd938c735d88669775738b1deee8b4961095a88536851",
+      "evidence": [
+        ".local-verification/publish/audit-evidence/AUDIT-REPORT.md",
+        ".local-verification/publish/audit-evidence/audit-summary.json"
+      ],
+      "confirmed_blockers": []
+    }
+  ]
+}

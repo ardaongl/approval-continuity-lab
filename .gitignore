@@ -1,0 +1,24 @@
+.env
+.env.*
+!.env.example
+.local-verification/
+.DS_Store
+__pycache__/
+.venv/
+build/
+dist/
+*.egg-info/
+*.sqlite
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+*.log
+src/approval_continuity_lab/documentation/
+
+# Interpreter/test caches and transient audit files
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
