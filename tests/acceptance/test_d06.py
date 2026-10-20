@@ -26,18 +26,22 @@ class ExecutionRace(Case):
 
     def test_real_busy_then_explicit_retry(self):
         self.seed()
-        with Worker(self.path,'execute-a') as a:
+        with Worker(self.path,'execute-a') as a, Worker(self.path,'execute-b') as b:
+            a.reach('before_begin');b.reach('before_begin')
+            a.release()
             a.reach('after_begin')
-            # Calibrate the actual SQLite error independently on this held DB.
+            # Both real lock attempts share the hold, rather than spending two
+            # sequential busy timeouts plus worker startup inside its 5s bound.
+            b.release()
             c=sqlite3.connect(self.path,isolation_level=None,timeout=2)
             try:
                 with self.assertRaises(sqlite3.OperationalError) as error:c.execute('BEGIN IMMEDIATE')
                 self.assertEqual(error.exception.sqlite_errorcode,sqlite3.SQLITE_BUSY)
                 busy_code=error.exception.sqlite_errorcode
             finally:c.close()
-            with Worker(self.path,'execute-b') as b:
-                rb=b.finish();self.code(rb,'STORAGE_BUSY');self.assertNotIn('after_begin',b.events)
-                self.assertEqual(rows(self.path,'executions'),[])
-                self.code(a.finish())
-                with Worker(self.path,'execute-b') as retry:self.code(retry.finish(),'APPROVAL_CONSUMED')
-                save('d06-busy',{'sqlite_errorcode':busy_code,'a':a.events,'b':b.events,'retry':retry.events,'sql':snapshot(self.path)})
+            rb=b.finish();self.code(rb,'STORAGE_BUSY');self.assertNotIn('after_begin',b.events)
+            self.assertIsNone(a.process.poll())
+            self.assertEqual(rows(self.path,'executions'),[])
+            self.code(a.finish())
+            with Worker(self.path,'execute-b') as retry:self.code(retry.finish(),'APPROVAL_CONSUMED')
+            save('d06-busy',{'sqlite_errorcode':busy_code,'a':a.events,'b':b.events,'retry':retry.events,'sql':snapshot(self.path)})
