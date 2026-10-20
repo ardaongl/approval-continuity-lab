@@ -15,8 +15,25 @@ jobs:
         with:
           persist-credentials: false
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        if: runner.os == 'Linux'
         with:
           python-version: '3.12.14'
+      - name: Build pinned CPython on macOS
+        if: runner.os == 'macOS'
+        shell: bash
+        run: bash .github/scripts/install-python-macos.sh
+      - name: Verify runtime contract
+        shell: bash
+        run: |
+          python -I -B - <<'PYTHON'
+          import json, os, platform, sqlite3, ssl, sys
+          print(json.dumps({"python": sys.version, "sqlite": sqlite3.sqlite_version,
+                            "platform": platform.platform(), "executable": sys.executable,
+                            "openssl": ssl.OPENSSL_VERSION}))
+          assert sys.version_info[:3] == (3, 12, 14)
+          assert sqlite3.sqlite_version_info >= (3, 35, 0)
+          assert os.name == "posix"
+          PYTHON
       - name: Prepare pinned tools from an empty cache
         shell: bash
         run: |

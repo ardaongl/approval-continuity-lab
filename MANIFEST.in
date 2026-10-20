@@ -3,7 +3,7 @@ include .python-version requirements-build.txt requirements-build.lock
 recursive-include docs *.md *.json *.txt
 recursive-include scripts *.py
 recursive-include tests *.py *.json
-recursive-include .github *.yml
+recursive-include .github *.yml *.sh
 recursive-include src/approval_continuity_lab/documentation *.md *.json *.txt
 global-exclude *.pyc *.pyo .DS_Store
 prune .local-verification
